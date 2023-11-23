@@ -1,18 +1,20 @@
 <h1 id="tableLabel">Tableau des scores</h1>
 
-<table class='table table-striped' aria-labelledby="tableLabel">
+<table class='table' aria-labelledby="tableLabel">
   <thead>
     <tr>
+      <th>Résultat</th>
       <th>Main du joueur</th>
       <th>Main de l'ordinateur</th>
-      <th>Résultat</th>
+      <th>Date et heure</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
+    <tr *ngFor="let score of scores" [class]="score.result=='Vous avez gagné'?'gagne':score.result=='Match nul'?'nul':'perd'">
+      <td>{{ score.result }}</td>
+      <td><img [src]="score.playerChoice=='Ciseaux'?'/assets/scissors.png': score.playerChoice=='Pierre'?'/assets/rock.png':'/assets/feuille.png'">{{ score.playerChoice }}</td>
+      <td><img [src]="score.computerChoice=='Ciseaux'?'/assets/scissors.png': score.computerChoice=='Pierre'?'/assets/rock.png':'/assets/feuille.png'">{{ score.computerChoice }}</td>
+      <td>{{ score.timestamp | date: 'short'}}</td>
     </tr>
   </tbody>
 </table>

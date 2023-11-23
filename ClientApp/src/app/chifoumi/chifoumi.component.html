@@ -1,20 +1,33 @@
 <div class="chifoumi-container">
-    <h2>Chifoumi</h2>
-
+    <h1 [class]="resultOfTheGame=='Vous avez gagné'?'gagne':resultOfTheGame=='Match nul'?'nul':resultOfTheGame=='Vous avez perdu'?'perd':''"> {{showResultMessage?resultOfTheGame:"Choisissez votre symbole, et tentez de vaincre l'ordinateur !" }}
+    </h1>
+    <!-- 
+    <div class="div1">/</div>
+    <div class="div2"></div>
+    <div class="div3"></div>-->
     <div class="choices">
-        <button (click)="play">Pierre
-            <!-- probleme avec l'image<img src="/assets/pierre.png" alt="Pierre">-->
+        <button *ngIf="!showResultMessage" (click)="play('Pierre')">
+            <img src="/assets/rock.png">
         </button>
-        <button (click)="play">Feuille
-            <!-- probleme avec l'image<img src="/assets/feuille.png" alt="Feuille"> -->
+        <button *ngIf="!showResultMessage" (click)="play('Feuille')">
+            <img src="/assets/feuille.png">
         </button>
-        <button (click)="play"> Ciseaux
-            <!-- probleme avec l'image<img src="/assets/ciseaux.png" alt="Ciseaux"> -->
+        <button *ngIf="!showResultMessage" (click)="play('Ciseaux')">
+            <img src="/assets/scissors.png">
         </button>
     </div>
+    <div *ngIf="showResultMessage">
+        <div class="player">
+            <p>Votre choix</p>
+            <img class="playerImg"[src]="playerChoice=='Ciseaux'?'/assets/scissors.png': playerChoice=='Pierre'?'/assets/rock.png':'/assets/feuille.png'">
+        </div>
+        <p class="vs">VS</p>
+        <div class="computer">
+            <p>Le choix de l'ordinateur</p>
+            <img class="computerImg" [src]="computerChoice=='Ciseaux'?'/assets/scissors.png': computerChoice=='Pierre'?'/assets/rock.png':'/assets/feuille.png'">
+        </div>
+    </div>
+    <button class="replay" *ngIf="showResultMessage"(click)="hideResult()">Rejouer</button>
 
-    <p *ngIf="showResultMessage">{{ resultMessage }}</p>
-    
-    <button *ngIf="showResultMessage" (click)="hideResult()">Rejouer</button>
 
 </div>

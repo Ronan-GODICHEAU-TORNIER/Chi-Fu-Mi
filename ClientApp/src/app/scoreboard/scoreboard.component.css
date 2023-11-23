@@ -1,0 +1,37 @@
+img{
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+.gagne{
+    background-color: #b0f2b6;
+}
+.perd{
+    background-color: #ff6961;
+}
+.nul{background-color: #fdfd96; }
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    align-items: normal;
+    font-family: 'mario', 'arial', sans-serif;;
+}
+
+tbody{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+thead{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: justify;
+}
+table{
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 10px;
+    border: 3px solid black;
+}

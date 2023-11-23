@@ -4,6 +4,20 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("https://localhost:44495") // Remplacez par l'URL de votre front-end Angular
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
+
+// ... autre configuration ...
+
+
+// Utiliser CORS
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -16,6 +30,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseCors();
 
 
 app.MapControllerRoute(

@@ -1,26 +1,140 @@
-.chifoumi-container button {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+
+.chifoumi-container .choices button {
+    background-color: white;
+    border: 1px solid black;
     border-radius: 4px;
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow:  0px 4px 0px 0px;
+    border-radius: 12px;
+    position: relative;
+    font-family: 'mario';
+    font-size: 20px;
 }
 
 .chifoumi-container button:hover {
-    background-color: #e0e0e0;
+    transition: translate 0.3s ease,box-shadow 0.3s ease;
+    transition-duration: 0.3s;
+    translate: 0px 3px;
+    box-shadow: 0px 1px 0px 0px;
 }
 .chifoumi-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
 }
-
+h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: normal;
+    font-family: 'mario', 'arial', sans-serif;;
+}
 .choices {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
+
+img{
+    height: 150px;
+    width: 150px;
+}
+
+.vs{
+    font-size: 50px;
+    align-items: normal;
+    font-family: 'mario', 'arial', sans-serif;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+.player{
+    display: inline-block;
+    font-family: 'mario', 'arial', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+.playerImg{
+    height: 200px;
+    width: 200px;
+}
+.computer{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'mario', 'arial', sans-serif;
+    display: inline-block;
+}
+.fight{
+    display: inline-block;
+}
+.computerImg{
+    height: 200px;
+    width: 200px;
+}
+.replay{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow:  0px 4px 0px 0px;
+    border-radius: 12px;
+    position: relative;
+    font-family: 'mario';
+    font-size: 20px;
+}
+.gagne{
+    padding: 5px;
+    border:solid black 1px;
+    border-radius: 12px;
+    background-color: #b0f2b6;
+}
+.nul{
+    padding: 5px;
+    border:solid black 1px;
+    border-radius: 12px;
+    background-color: #fdfd96;
+}
+.perd{
+    padding: 5px;
+    border:solid black 1px;
+    border-radius: 12px;
+    background-color: #ff6961 ;
+}
+    /*
+.div1 {
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    bottom: 15%;
+    left: 40%;
+    background: url(/assets/feuille.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .div2 {
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    background: url(/assets/scissors.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .div3 {
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background: url(/assets/rock.png);
+    background-repeat: no-repeat;
+    background-size: contain;   
+  }*/
+  
