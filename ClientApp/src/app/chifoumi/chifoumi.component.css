@@ -28,6 +28,8 @@
 h1{
     margin-top: 50px;
     margin-bottom: 50px;
+    font-size: 50px;
+    text-align: center;
     align-items: normal;
     font-family: 'mario', 'arial', sans-serif;;
 }
@@ -38,12 +40,12 @@ h1{
 }
 
 img{
-    height: 150px;
-    width: 150px;
+    height: 300px;
+    width: 300px;
 }
 
 .vs{
-    font-size: 50px;
+    font-size: 80px;
     align-items: normal;
     font-family: 'mario', 'arial', sans-serif;
     display: inline-block;
@@ -52,17 +54,21 @@ img{
 
 }
 .player{
+    height: 450px;
+    width: 450px;
     display: inline-block;
     font-family: 'mario', 'arial', sans-serif;
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
 }
 .playerImg{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
 }
 .computer{
-    font-size: 20px;
+    height: 450px;
+    width: 450px;
+    font-size: 40px;
     text-align: center;
     font-family: 'mario', 'arial', sans-serif;
     display: inline-block;
@@ -71,8 +77,8 @@ img{
     display: inline-block;
 }
 .computerImg{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
 }
 .replay{
     background-color: white;
@@ -86,7 +92,7 @@ img{
     border-radius: 12px;
     position: relative;
     font-family: 'mario';
-    font-size: 20px;
+    font-size: 50px;
 }
 .gagne{
     padding: 5px;
