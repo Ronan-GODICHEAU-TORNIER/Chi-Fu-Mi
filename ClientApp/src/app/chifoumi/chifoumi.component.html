@@ -1,0 +1,20 @@
+<div class="chifoumi-container">
+    <h2>Chifoumi</h2>
+
+    <div class="choices">
+        <button (click)="play">Pierre
+            <!-- probleme avec l'image<img src="/assets/pierre.png" alt="Pierre">-->
+        </button>
+        <button (click)="play">Feuille
+            <!-- probleme avec l'image<img src="/assets/feuille.png" alt="Feuille"> -->
+        </button>
+        <button (click)="play"> Ciseaux
+            <!-- probleme avec l'image<img src="/assets/ciseaux.png" alt="Ciseaux"> -->
+        </button>
+    </div>
+
+    <p *ngIf="showResultMessage">{{ resultMessage }}</p>
+    
+    <button *ngIf="showResultMessage" (click)="hideResult()">Rejouer</button>
+
+</div>
